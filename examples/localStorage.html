@@ -1,0 +1,38 @@
+<html>
+<head>
+<link href="../css/bootstrap.min.css" rel="stylesheet" media="screen" />
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script>
+$(document)
+.ready(
+		function() {
+			$("#save_local_storage").click(
+					function() {
+						window.localStorage.setItem('value', $(
+								"#local_storage").val());
+						window.localStorage.setItem('timestamp',
+								(new Date()));
+					});
+			$("#local_storage").val(
+					window.localStorage.getItem('value'));
+			$("#date_local_storage")
+					.text(
+							(new Date(window.localStorage
+									.getItem('timestamp')))
+									.toUTCString());
+		});
+
+</script>
+</head>
+<body>
+	<div class="container">
+		<label for=textarea>Name</label>
+		<textarea id="local_storage" name="textarea"
+			placeholder="Type your text here..."></textarea>
+		<label for=fecha>Fecha Guardado</label>
+		<p id="date_local_storage"></p>
+		<button id="save_local_storage" class="btn btn-primary">Guardar</button>
+	</div>
+</body>
+</html>

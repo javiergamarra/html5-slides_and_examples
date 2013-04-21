@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<title>indexeddb</title>
+<style type="text/css">
+#todos li span {
+	display: none;
+}
+</style>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script type="text/javascript" charset="utf-8">
+$(function () {
+        $('[type=submit]').on('click', function (e) {
+                namespace.indexedDB.addTodo($('#todo').val());
+                $('#todo').val('');
+                return false;
+        });
+
+        $('#todos').on('click', '.delete', function (e) {
+                namespace.indexedDB.deleteTodo(parseInt($(this).parent().find('span').text()));
+                return false;
+        });
+
+        namespace.indexedDB.open();
+});
+
+window.indexedDB = window.indexedDB || window.webkitIndexedDB || window.mozIndexedDB || window.msIndexedDB;
+window.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction;
+window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange;
+
+var namespace = {}; 
+namespace.indexedDB = {}; 
+namespace.indexedDB.db = null;
+
+// open/create
+namespace.indexedDB.open = function() {
+        var request = indexedDB.open('todos', 5);
+        console.log(request);
+       
+        request.onsuccess = function(e) {
+                console.log('onsuccess', e);
+                namespace.indexedDB.db = e.target.result;
+                var db = namespace.indexedDB.db;
+                console.log('db', db);
+                namespace.indexedDB.getAllTodoItems();
+        };
+};
+
+namespace.indexedDB.addTodo = function(todoText) {
+        var db = namespace.indexedDB.db;
+        var trans = db.transaction(['todo'], 'readwrite');
+        var store = trans.objectStore('todo');
+        var request = store.put({
+                'text': todoText,
+                'timeStamp' : new Date().getTime()
+        });
+
+        request.onsuccess = function(e) {
+                namespace.indexedDB.getAllTodoItems();
+        };
+
+        request.onerror = function(e) {
+                console.log(e.value);
+        };
+};
+
+namespace.indexedDB.getAllTodoItems = function() {
+        $('#todos').html('');
+       
+        var db = namespace.indexedDB.db;
+        var trans = db.transaction(['todo'], 'readwrite');
+        var store = trans.objectStore('todo');
+
+        var keyRange = IDBKeyRange.lowerBound(0);
+        var cursorRequest = store.openCursor(keyRange);
+
+        cursorRequest.onsuccess = function(e) {
+                var result = e.target.result;
+                if(!!result == false)
+                        return;
+
+                renderTodo(result.value);
+                result.continue();
+        };
+
+        cursorRequest.onerror = namespace.indexedDB.onerror;
+};
+
+namespace.indexedDB.deleteTodo = function(id) {
+        var db = namespace.indexedDB.db;
+        var trans = db.transaction(['todo'], 'readwrite');
+        var store = trans.objectStore('todo');
+
+        var request = store.delete(id);
+
+        request.onsuccess = function(e) {
+                namespace.indexedDB.getAllTodoItems(); 
+        };
+
+        request.onerror = function(e) {
+                console.log(e);
+        };
+};
+
+function renderTodo(row) {
+        var li = '<li>'+row.text+'<a href="#" class="delete">[Delete]</a><span>'+row.timeStamp+'</span></li>';
+        $('#todos').append(li);
+}
+</script>
+</head>
+<body>
+	<section class="shell">
+		<ul id="todos">
+
+		</ul>
+		<input type="text" id="todo" name="todo"
+			placeholder="What do you need to do?" /> <input type="submit"
+			value="Add Todo Item" />
+	</section>
+</body>
+</html>

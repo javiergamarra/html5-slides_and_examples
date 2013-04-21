@@ -1,0 +1,16 @@
+.slide {
+	-webkit-transition: all 0s ease-in-out;
+	-moz-transition: all 0s ease-in-out;
+	-o-transition: all 0s ease-in-out;
+	transition: all 0s ease-in-out;
+	width: 90%;
+	height: 80%;
+	margin-top: -45%;
+	overflow: visible;
+}
+
+.slide.current {
+	margin-left: 0px;
+	left: 2.5%;
+}
+

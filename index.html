@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>an HTML5 example</title>
+<link href="css/theme.css" rel="stylesheet" />
+</head>
+<body>
+	<div class="presentation">
+		<section class="slide">
+			<header class=title> HTML 5 </header>
+			<p style="text-align: center;">
+				<img src="img/logo.png" />
+			</p>
+		</section>
+
+		<section class="slide">
+			<header class=title>jQuery?</header>
+		</section>
+
+
+		<section class="slide">
+			<header class=title>AVISO!</header>
+		</section>
+
+		<section class="slide">
+			<header class=title>
+				HTML 5 es un <u>BUZZWORD</u>
+			</header>
+		</section>
+
+		<section class="slide">
+			<header class=title>
+				HTML 5 es <u>JAVASCRIPT</u>
+			</header>
+		</section>
+
+		<section class="slide">
+			<header>Futuro de JavaScript</header>
+			<ul>
+				<li>Esto marca el renacer de JavaScript: JavaScript es un
+					lenguaje serio</li>
+				<li>Dinámico</li>
+				<li>Débilmente tipado</li>
+				<li>Orientado a prototipos, no a clases</li>
+				<li>Funciones como elementos de primera-clase</li>
+				<li>closures</li>
+				<li>Soporta programación orientada al objeto, imperativa y
+					funcional</li>
+				<li>Ha salido de la web: aplicaciones móviles, aplicaciones de
+					Windows 8, servidores de aplicaciones...</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<header>Ejemplos de tecnologías</header>
+			<ul>
+				<li><a href="http://zeptojs.com/#$.inArray">Zepto.js</a>:
+					sustituto de jQuery para aplicaciones móviles</li>
+				<li><a href="http://nodejs.org/">Node.js</a>: servidor de
+					aplicaciones en javascript, código ejecutado EN SERVIDOR</li>
+				<li><a href="http://coffeescript.org/">CoffeScript</a>:
+					lenguaje que compila a javascript, sintaxis similar a Ruby</li>
+				<li><a href="http://backbonejs.org/#examples">Backbone.js</a>:
+					framework de estructura (estilo MVC)</li>
+				<li><a href="http://meteor.com/">Meteor</a>: framework END to
+					END</li>
+				<li><a href="http://underscorejs.org/#objects">Underscore.js</a>:
+					librería para cubrir limitaciones de JS</li>
+				<li><a href="https://github.com/mbostock/d3/wiki/Gallery">D3.js</a>:
+					librería de SVG</li>
+				<li><a href="http://socket.io/">Socket.io</a>: gestión de
+					websockets</li>
+				<li><a href="http://handlebarsjs.com/">Handlebar</a>:
+					templates/plantillas en JS</li>
+			</ul>
+		</section>
+
+
+		<section class="slide">
+			<header>Historia</header>
+			<ul>
+				<li>1999: la <a
+					href="http://en.wikipedia.org/wiki/World_Wide_Web_Consortium">W3C</a>
+					(la organización de estándares de Internet) publicó HTML4.
+				</li>
+				<li>1999: la W3C centra todos sus esfuerzos en <a
+					href="http://en.wikipedia.org/wiki/XHTML">xhtml</a>
+				</li>
+				<li>2004: tras una votación en contra de seguir desarrollando
+					HTML, se forma <a
+					href="http://en.wikipedia.org/wiki/Web_Hypertext_Application_Technology_Working_Group">WHATWG</a>,
+					un grupo de gente interesada en evolucionar HTML
+				</li>
+				<li>2007: la W3C cede y se reintegra en HTML5</li>
+				<li>2012: Working Draft pero "living standard"</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<header>Tecnologías</header>
+			<img src="img/tecnologias.png" width="100%" height="550px">
+		</section>
+
+		<section class="slide">
+			<header> HTML Markup / Nuevas semánticas </header>
+			<ul>
+				<li>Sustituciones semánticas</li>
+				<li>Eliminados componentes presenciales</li>
+				<li>Validación laxa</li>
+				<li><a
+					href="http://es.wikipedia.org/wiki/HTML5#Diferencias_entre_HTML5_y_HTML4.2FXHTML">Lista
+						exhaustiva</a></li>
+			</ul>
+			<ul>
+				<li>&lt;!DOCTYPE html&gt;</li>
+				<li>&lt;meta charset=utf-8&gt;</li>
+				<li>&lt;header&gt;</li>
+				<li>&lt;footer&gt;</li>
+				<li>&lt;nav&gt;</li>
+				<li>&lt;section&gt;</li>
+				<li>&lt;article&gt;</li>
+				<li>&lt;aside&gt;</li>
+				<li>&lt;meter&gt;</li>
+				<li>&lt;progress&gt;</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<img src="img/tags.png" width="100%" height="650px">
+		</section>
+
+		<section class="slide">
+			<header>Soporte</header>
+			<a href="http://caniuse.com/#feat=html5semantic">Semántica</a>
+			<p>Puede funcionar en todos los navegadores con simples
+				modificaciones.</p>
+			<p>Por ejemplo (iexplore.js)</p>
+			<p>Y en JSF?: pendiente... sólo funcionar oficialmente con IE8
+				limita mucho el soporte de librerías públicas</p>
+		</section>
+
+		<section class="slide">
+			<header>Ejercicio</header>
+			<p>Probadlo, cread una página utilizando los nuevos tags</p>
+			<p>Inspeccionad la página con Chrome Developer Tools (F12) o en
+				IE 6.0</p>
+		</section>
+
+		<section class="slide">
+			<header>Ejercicio</header>
+			<p>En old-page se muestra un elemento de un blog maquetado
+				tradicionalmente</p>
+			<p>El ejercicio es crear una página nueva maquetada con HTML5</p>
+		</section>
+
+		<section class="slide">
+			<header> Nuevos campos de formulario </header>
+			<ul>
+				<li>&lt;input type=email&gt;</li>
+				<li>&lt;input type=url&gt;</li>
+				<li>&lt;input type=date&gt;</li>
+				<li>&lt;input type=time&gt;</li>
+				<li>&lt;input type=datetime&gt;</li>
+				<li>&lt;input type=month&gt;</li>
+				<li>&lt;input type=number&gt;</li>
+				<li>&lt;input type=range&gt;</li>
+				<li>&lt;input type=month&gt;</li>
+				<li>&lt;datalist&gt; con options</li>
+				<li>autofocus, required, autocomplete, min, max...</li>
+			</ul>
+			<a href="http://caniuse.com/#feat=forms">Soporte</a>
+		</section>
+
+		<section class="slide">
+			<header>Ejercicio</header>
+			<p>Probad alguno de los campos dentro de un formulario</p>
+			<p>En Chrome salta validación, requisitos...</p>
+		</section>
+
+		<section class="slide">
+			<header>Storage</header>
+			<ul>
+				<li>Web Storage</li>
+				<li>Web SQL Database (deprecated)</li>
+				<li>Indexed DB</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<header>Session/Local Storage</header>
+			<p>Almacenamiento similar a cookies</p>
+			<p>Opción local persiste diferentes sesiones</p>
+			<p>Opción sesión, como una sesión tradicional</p>
+			<pre>
+				<span style="font-size: 16px">
+				&lt;script src="http://code.jquery.com/jquery.js"&gt;&lt;script&gt;
+$("#save_local_storage").click(function() {
+	window.localStorage.setItem('value',$("#local_storage").val());
+	window.localStorage.setItem('timestamp', (new Date()));
+});
+$("#local_storage").val(window.localStorage.getItem('value'));</span>
+		</pre>
+			<a href="http://caniuse.com/namevalue-storage">Soporte</a>
+		</section>
+
+		<section class="slide">
+			<header>Ejercicio</header>
+			<p>Cread un textarea e intentad guardarlo</p>
+			<p>Revisad si se ha guardado correctamente y sobrevive refrescos
+				de pantalla...</p>
+		</section>
+
+		<section class="slide">
+			<header> Web SQL Database </header>
+			<pre>
+			<span style="font-size: 16px">
+var db = window.openDatabase("DBName", "1.0", "desc", 2*1024*1024);
+db.transaction(function(tx) {
+  tx.executeSql("SELECT * FROM test", [], successCallback, errorCallback);
+});
+</span>
+					</pre>
+			<p>El estándar de base de datos no estaba decidido aún (SQLite)</p>
+			<a href="http://caniuse.com/sql-storage">Soporte</a>
+		</section>
+
+		<section class="slide">
+			<header>Indexed DB</header>
+			<ul>
+				<li>Alternativa a Web Storage</li>
+				<li>Será utilizada con librerías que simplifiquen uso</li>
+				<li>Base de datos centrada en índices</li>
+				<li>Alrededor del concepto ObjectStore</li>
+				<li>Almacena valores simples u objetos JS</li>
+				<li>Modo síncrono y asíncrono</li>
+				<li>Necesita creación previa</li>
+			</ul>
+			<a href="http://caniuse.com/indexeddb">Soporte</a>
+		</section>
+
+		<section class="slide">
+			<header>Ejercicio</header>
+			<ul>
+				<li>Cómo estamos guardando la fecha de guardado, mostrarla por
+					pantalla</li>
+				<li>Eliminad una nota</li>
+			</ul>
+
+		</section>
+
+		<section class="slide">
+			<header> Cache y manifest </header>
+			<ul>
+				<li>Caché local en el navegador</li>
+				<li>Soportado por Firefox, Chrome, Safari, IOS y Android 2.0+</li>
+				<li>Muy útil para utilizar en aplicaciones para móviles</li>
+				<li>Fichero Manifest indicamos los ficheros necesarios por el
+					lado del cliente. Cache implicito</li>
+				<li>
+					<p>
+						CACHE MANIFEST<br /> # v = 1.0.0<br /> /style.css<br />
+						/javascripts/notes.js<br /> /javascripts/jquery.min.js
+					</p>
+				</li>
+				<li>#v = 1.0.0 -&gt; Indica versión. Al cambiar actualiza
+					ficheros.</li>
+				<li>&lt;html manifest="xxx.appcache"&gt;</li>
+			</ul>
+			<a href="http://caniuse.com/#feat=offline-apps">Soporte</a>
+		</section>
+
+		<section class="slide">
+			<header>Ejercicio</header>
+			<p>Definid un fichero de ejemplo</p>
+			<p>Si no servís los ficheros con un servidor no funcionará (hay
+				que especificar un content type)</p>
+
+		</section>
+
+		<section class="slide">
+			<header> Canvas </header>
+			Literalmente, un canvas sobre el que pintar
+			<pre>
+			<span style="font-size: 16px">
+&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
+var ctx = document.querySelector('canvas').getContext('2d');
+ctx.fillRect(10, 20, 50, 50);
+</span>
+</pre>
+			<canvas id="canvas" height="80px"></canvas>
+			<script type="text/javascript">
+				var ctx = document.querySelector("canvas").getContext("2d");
+				ctx.fillRect(10, 20, 50, 50);
+			</script>
+			<ul>
+				<li>El núcleo del estándar</li>
+				<li>Forma el germen de WebGL</li>
+				<li><a href="http://caniuse.com/#feat=canvas">Soporte</a></li>
+			</ul>
+			<div class="comments">
+				<ul>
+					<li><a
+						href="http://madebyevan.com/webgl-water/?utm_source=html5weekly&utm_medium=email">Water</a>
+					</li>
+					<li><a href="http://soulwire.co.uk/experiments/recursion-toy/">Recursion</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="slide">
+			<header>Ejercicio</header>
+			<p>Pintar algo que no sea un rectángulo</p>
+			<pre>
+				<span style="font-size: 16px">
+	ctx.fillStyle = 'rgba(175, 81, 0, 10)';
+	ctx.beginPath();
+	ctx.moveTo(10,20);
+	ctx.lineTo(10,30);
+	ctx.lineTo(20,30);
+	ctx.fill();
+	ctx.stroke();
+	ctx.closePath();
+			</span>
+			</pre>
+		</section>
+
+		<section class="slide">
+			<header> Geolocalización </header>
+			<ul>
+				<li>Localiza usando IP, Mac, WIFI e incluso GPS si tiene.</li>
+				<li>Compatible con Firefox, Chrome y Safari</li>
+			</ul>
+			<pre>
+			<span style="font-size: 16px">
+			if (navigator.geolocation) {
+	  			navigator.geolocation.getCurrentPosition(success, error);
+	  		}
+			</span>			
+			</pre>
+			<a href="http://caniuse.com/#feat=geolocation">Soporte</a> <a
+				href="http://html5demos.com/geo">Prueba</a>
+		</section>
+
+		<section class="slide">
+			<header> Audio &amp; Video </header>
+			<pre>
+video src=Examplevideo.ogv controls autoplay
+					</pre>
+			<video
+				src="http://upload.wikimedia.org/wikipedia/commons/6/65/Examplevideo.ogv"
+				controls>Use Chrome
+			</video>
+		</section>
+
+		<section class="slide">
+			<header> Audio &amp; Video </header>
+			<video
+				src=http://erunways.com/html5/WebM_VP8_video/html5_Video_VP8.webm
+				controls height="300px">Use Chrome
+			</video>
+		</section>
+
+		<section class="slide">
+			<header> Audio &amp; Video </header>
+			<ul>
+				<li>Problema de codecs:
+					<ul>
+						<li>H264 (IE)</li>
+						<li>ogv (Firefox)</li>
+						<li>WebM (Chrome)</li>
+					</ul>
+				<li>Eventos</li>
+				<li>Captions</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<header> Drag &amp; Drop </header>
+			<pre>
+			<span style="font-size: 16px">
+&lt;div draggable="true"&gt;This element be draggable&lt;/div&gt;
+var drop = document.getElementById("drop");
+drop.ondrop = function (event) {
+	this.innerHTML += "&lt;p&gt;" + event.dataTransfer.getData("t") + "&lt;p&gt;";
+};
+drop.ondragover = function () { return false; }; 
+</span>
+</pre>
+			<ul>
+				<li>API iniciada por IE 5.5</li>
+				<li>Aceptado dentro del estándar para lograr uniformidad</li>
+				<li>Muchas excepciones</li>
+				<li>El soporte de drag and drop de ficheros sólo funciona en
+					Chrome</li>
+				<li><a href="http://html5demos.com/file-api">Prueba</a>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<header>Ejercicio</header>
+			<p>Probad a arrastrar algo!</p>
+		</section>
+
+		<section class="slide">
+			<header> Web workers </header>
+			<ul>
+				<li>JavaScript es mono hilo</li>
+				<li>Permite tareas en background en cliente</li>
+				<li>Cualquier JS puede ser un worker pero no puede tocar DOM</li>
+				<li>Flujo de trabajo:
+					<ul>
+						<li>Creación de worker</li>
+						<li>postMessage -&gt; Worker</li>
+						<li>Worker ejecuta la tarea y al termina de nuevo postMessage</li>
+						<li>onMessage cambiamos el DOM</li>
+					</ul>
+				</li>
+				<li><a
+					href="http://www.w3schools.com/html/html5_webworkers.asp">Prueba</a>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<header> Web sockets </header>
+			<ul>
+				<li>HTTP no permite conexión permanente</li>
+				<li>Web sockets permite conexión a un servidor</li>
+				<li>Eventos:
+					<ul>
+						<li>onOpen()</li>
+						<li>onMessage()</li>
+						<li>onClose()</li>
+					</ul>
+				</li>
+				<li>Parte cliente en un JS</li>
+				<li>Dos servidores: web y websockets</li>
+				<li><a href="http://html5demos.com/web-socket">Prueba</a>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<header>Espera! hay más...</header>
+			Se quedan fuera decenas de cosas...
+			<ul>
+				<li>WebGL</li>
+				<li>FileSystems</li>
+				<li>Microdata</li>
+				<li>MathML</li>
+				<li>SVG</li>
+				<li>Fonts</li>
+				<li>Devices</li>
+				<li>Native</li>
+				<li>...</li>
+			</ul>
+		</section>
+
+
+		<section class="slide">
+			<header>Pila de HTML5</header>
+			<p>
+				<b>Soporte????</b>
+			</p>
+			<p>
+				Solución: <a
+					href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills">Polifills</a>
+			</p>
+		</section>
+
+		<section class="slide">
+			<header>Ejercicio</header>
+			<p>Probad un polyfill</p>
+			<p>Recomiendo excanvas</p>
+		</section>
+
+		<section class="slide">
+			<header>Configuración habitual?</header>
+			<p>
+				Templates ya creados, estilo <a href="http://html5boilerplate.com/">Boilerplate</a>
+			</p>
+			<p>
+				Con librerías estilo <a href="http://modernizr.com/">Modernizer</a>
+			</p>
+		</section>
+
+		<section class="slide">
+			<header>Ejercicio</header>
+			<p>Probad una plantilla de Boilerplate</p>
+		</section>
+
+		<section class="slide">
+			<header>Conclusiones</header>
+			<p>Importante mencionar uso en dispositivos móviles (Phonegap y
+				Titanium, dos frameworks de desarrollo móvil en HTML5 que funcionan
+				en las dos plataformas)</p>
+			<ul>
+				<li>Muy potente</li>
+				<li>Es un futuro, no un presente para entornos corporativos</li>
+				<li>Algunas funcionalidades si que pueden tener uso ya</li>
+				<li>...</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<header>Tecnologías de extensión de CSS</header>
+			<p>Las hojas de estilo son complicadas de mantener</p>
+			<p>En seguida crecen a cientos de líneas de código, son confusas
+				y tienen elementos repetidos (selectores, colores...)</p>
+			<ul>
+				<li><a href="http://lesscss.org/">Less</a></li>
+				<li><a href="http://sass-lang.com/">Sass</a></li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<header>SASS</header>
+			<ul>
+				<li>Sass necesita Ruby e instalar una gema (gem install sass)</li>
+				<li>sass --watch stylesheets/sass:stylesheets/css</li>
+			</ul>
+			<pre>
+			<span style="font-size: 16px">
+$main-color: #ce4dd6;
+$style: solid;
+#navbar {
+  border-bottom: {
+    color: $main-color;
+    style: $style;
+  }
+}
+a {
+  color: $main-color;
+  &:hover { border-bottom: $style 1px; }
+}
+			</span>
+			</pre>
+		</section>
+
+		<section class="slide">
+			<header>Ejercicio</header>
+			<p>Probar SASS</p>
+			<ul>
+				<li>Instalar Ruby</li>
+				<li>Instalar la gema (abrir una consola y poner 'gem install
+					sass')</li>
+				<li>Crear una hoja de estilos .scss</li>
+				<li>Ejecutar el comando que compila a css</li>
+				<li>Utilizar la hoja css creada en una página</li>
+			</ul>
+		</section>
+
+
+		<section class="slide">
+			<header>CSS3</header>
+			<ul>
+				<li>Extensión de CSS2</li>
+				<li>Aún más futuro que HTML5</li>
+				<li><a href="http://www.w3.org/Style/CSS/specs">Modularizada</a>
+					en vez de una extensión única. Algunos de los módulos:
+					mediaqueries, transformaciones, nuevos selectores...</li>
+				<li><a
+					href="http://www.w3schools.com/cssref/css3_browsersupport.asp">Muy
+						muy verde aún</a></li>
+				<li><a
+					href="http://peter.sh/experiments/vendor-prefixed-css-property-overview/">Y
+						muchas etiquetas para cada navegador</a></li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<header>Responsive Web Design/Media Queries</header>
+			<ul>
+				<li><a
+					href="http://mashable.com/2012/12/11/responsive-web-design/">Palabra
+						de moda de 2013</a></li>
+				<li><a
+					href="http://engage.synecoretech.com/marketing-technology-for-growth/bid/169593/10-Examples-of-Amazing-Responsive-Web-Design">Ejemplos</a></li>
+			</ul>
+			<pre>
+			<span style="font-size: 16px">
+@media screen and (max-width:480px) {
+    #blog_rwd {
+    	float: none;
+      	width: 60.714285714285714285714285714286%;
+		background-color:#FFB3B3;
+    }
+}
+		</span>	
+			</pre>
+		</section>
+
+		<section class="slide">
+			<header>Ejemplos de HTML5</header>
+			<ul>
+				<li>Esta misma presentación: CSS3 (transformaciones y
+					selectores), HTML5 (tags) y jQuery</li>
+				<li>Demo de Drag and Drop: CSS3, HTML5 (tags y drag & drop)</li>
+				<li>Stars like Dust: tags y canvas</li>
+				<li>Wedding Game: tags y canvas</li>
+				<li>Wedding Web: ajax con jQuery, tags y fonts</li>
+			</ul>
+
+		</section>
+
+		<section class="slide">
+			<header> Referencias </header>
+			<article>
+				<ul>
+					<li><a
+						href="https://www.dropbox.com/s/bsy9qxyowpduzow/Introducing%20HTML%205%20-%20Bruce%20Lawson.pdf">Introducing
+							HTML5 de Bruce Lawson y Remy Sharp</a></li>
+					<li><a
+						href="https://www.dropbox.com/s/1nvbmhe2usrqhvm/HTML5%20and%20CSS3_%20Develop%20With%20Tomorrow%27s%20%20-%20Brian%20P.%20Hogan.pdf">HTML5
+							&amp; CSS3 por Brian P. Hogan</a></li>
+					<li><a href="http://diveintohtml5.info/">Dive into HTML5</a> /
+						<a
+						href="https://www.dropbox.com/s/p8cb0cueonazma8/HTML5_%20Up%20and%20Running%20-%20Mark%20Pilgrim.pdf">HTML5:
+							Up and Running de Mark Pilgrim</a></li>
+				</ul>
+			</article>
+		</section>
+
+		<section class="slide">
+			<header> Enlaces </header>
+			<ul>
+				<li><a href="http://mobilehtml5.org/">HTML5 Mobile</a></li>
+				<li><a href="http://html5please.com/">Recomendaciones...</a></li>
+				<li><a href="http://html5test.com/">Mi navegador que tal
+						es?</a></li>
+				<li><a href="http://www.html5rocks.com/en/">Demos y
+						tutoriales</a></li>
+				<li><a href="http://www.w3.org/TR/html5/">Especificación</a></li>
+				<li><a
+					href="http://html5test.com/?utm_source=html5weekly&utm_medium=email">Test
+						HTML5 Weekly</a></li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<header class=title> ¿Dudas? </header>
+		</section>
+
+		<section class="slide">
+			<header class=title> The End... </header>
+		</section>
+	</div>
+
+	<script
+		src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="js/presentation.js"></script>
+	<script src="js/html5.js"></script>
+</body>
+</html>

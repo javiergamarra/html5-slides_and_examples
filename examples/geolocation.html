@@ -1,0 +1,21 @@
+<html>
+<body>
+	<script>
+	if (navigator.geolocation) {
+	  navigator.geolocation.getCurrentPosition(success, error);
+	} else {
+	  error('not supported');
+	}
+
+	function success(position) {
+		alert(position.coords.latitude + ' ' + position.coords.longitude)
+	}
+
+	function error(msg) {
+		 alert(msg);
+	}
+</script>
+
+</body>
+
+</html>

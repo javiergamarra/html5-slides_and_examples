@@ -1,0 +1,15 @@
+<html>
+<body>
+	<canvas></canvas>
+	<script>
+	var ctx = document.querySelector('canvas').getContext('2d');
+	ctx.fillStyle = 'rgba(175, 81, 0, 10)';
+	ctx.beginPath();
+	ctx.moveTo(10,20);
+	ctx.lineTo(10,30);
+	ctx.lineTo(20,30);
+	ctx.fill();
+	ctx.stroke(); ctx.closePath();
+	</script>
+</body>
+</html>
